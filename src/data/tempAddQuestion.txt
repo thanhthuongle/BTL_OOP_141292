@@ -1,0 +1,4 @@
+1 check
+A. da1
+B. da2
+ANSWER: A:2.25,B:0.75,Mark:3

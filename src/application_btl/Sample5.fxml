@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1370.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller5">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1355.0" styleClass="background">
+         <children>
+            <Label alignment="BOTTOM_LEFT" layoutX="18.0" layoutY="14.0" text="Adding a new Quiz" textFill="#d31313">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="207.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="77.0" text="General" textFill="#d31313">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="1130.0" layoutX="160.0" layoutY="435.0" opacity="0.5" startX="-100.0" stroke="#979090" strokeWidth="0.7" />
+            <Label layoutX="66.0" layoutY="134.0" text="Name" />
+            <Label layoutX="66.0" layoutY="183.0" text="Description" />
+            <TextField fx:id="textFieldName" layoutX="551.0" layoutY="130.0" prefHeight="25.0" prefWidth="271.0" />
+            <TextArea layoutX="551.0" layoutY="172.0" prefHeight="204.0" prefWidth="575.0" wrapText="true" />
+            <Label layoutX="551.0" layoutY="395.0" text="Display description on course page ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+               </graphic>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="839.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="523.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icona.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="74.0" layoutY="444.0" text="Timing" textFill="#d31313">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="openDayComboBox" disable="true" layoutX="550.0" layoutY="494.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass></ComboBox>
+            <ComboBox fx:id="openMonthComboBox" disable="true" layoutX="639.0" layoutY="494.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="105.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass></ComboBox>
+            <ComboBox fx:id="openYearComboBox" disable="true" layoutX="775.0" layoutY="494.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="70.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass></ComboBox>
+            <ComboBox fx:id="closeDayComboBox" disable="true" layoutX="549.0" layoutY="544.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="closeMonthComboBox" disable="true" layoutX="641.0" layoutY="544.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="105.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="closeYearComboBox" disable="true" layoutX="773.0" layoutY="544.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="70.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <Label layoutX="72.0" layoutY="498.0" text="Open the quiz" />
+            <Label layoutX="72.0" layoutY="551.0" text="Close the quiz" />
+            <Label layoutX="72.0" layoutY="594.0" text="Time limit" />
+            <Label layoutX="72.0" layoutY="635.0" text="When time expires" />
+            <TextField fx:id="textFieldTimeLimit" disable="true" layoutX="549.0" layoutY="589.0" prefHeight="25.0" prefWidth="60.0" promptText="0" />
+            <ComboBox fx:id="optionTimeLimit" disable="true" layoutX="640.0" layoutY="589.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="90.0" promptText="minutes">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox layoutX="549.0" layoutY="629.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="298.0" promptText=" Open attempts are submitted automatically">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="openHourComboBox" disable="true" layoutX="864.0" layoutY="494.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="closeHourComboBox" disable="true" layoutX="866.0" layoutY="544.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="openMinuteComboBox" disable="true" layoutX="941.0" layoutY="494.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <ComboBox fx:id="closeMinuteComboBox" disable="true" layoutX="942.0" layoutY="544.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="60.0">
+               <styleClass>
+                  <String fx:value="background" />
+                  <String fx:value="pane2" />
+               </styleClass>
+            </ComboBox>
+            <CheckBox fx:id="checkOpenTime" layoutX="1020.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#checkOpeneEnable" text="Enable" />
+            <CheckBox fx:id="checkCloseTime" layoutX="1020.0" layoutY="544.0" mnemonicParsing="false" onMouseClicked="#checkCloseEnable" text="Enable" />
+            <CheckBox fx:id="checkLimitTime" layoutX="745.0" layoutY="589.0" mnemonicParsing="false" onMouseClicked="#checkTimeLimitEnable" text="Enable" />
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="523.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="523.0" layoutY="594.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="25.0" layoutX="523.0" layoutY="634.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/question.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="1049.0" layoutY="654.0" mnemonicParsing="false" onAction="#cancelSceneAddNewQuiz" prefHeight="30.0" prefWidth="80.0" styleClass="button1" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1186.0" layoutY="654.0" mnemonicParsing="false" onAction="#createSceneAddNewQuiz" prefHeight="30.0" prefWidth="80.0" styleClass="button2" text="Create" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tooltipView" layoutX="1089.0" layoutY="85.0" prefHeight="25.0" prefWidth="251.0" visible="false">
+               <tooltip>
+                  <Tooltip fx:id="noticeError" styleClass="tooltip1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </TextField>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

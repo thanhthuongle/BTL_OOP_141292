@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane prefHeight="700.0" prefWidth="1355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller1">
+   <content>
+      <AnchorPane prefHeight="700.0" prefWidth="1330.0" styleClass="background">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="1355.0" styleClass="pane1">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="42.0" layoutX="21.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/menu.png" />
+                     </image>
+                  </ImageView>
+                  <MenuButton layoutX="1307.0" layoutY="10.0" mnemonicParsing="false" styleClass="menubutton1" />
+                  <Label alignment="CENTER_RIGHT" layoutX="1125.0" layoutY="12.0" prefHeight="19.0" prefWidth="150.0" text="user name" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="42.0" layoutX="1282.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="224.0" prefHeight="480.0" prefWidth="1335.0">
+               <children>
+                  <VBox fx:id="vbox" layoutX="53.0" layoutY="23.0" prefHeight="447.0" prefWidth="700.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="pane2" />
+                  <String fx:value="background" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane layoutY="45.0" prefHeight="135.0" prefWidth="450.0">
+               <children>
+                  <Pane layoutX="10.0" layoutY="14.0" prefHeight="150.0" prefWidth="1335.0">
+                     <styleClass>
+                        <String fx:value="pane2" />
+                        <String fx:value="background" />
+                     </styleClass>
+                     <children>
+                        <MenuButton layoutX="1282.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#popup" prefHeight="25.0" prefWidth="24.0" styleClass="background" />
+                        <ImageView fitHeight="37.0" fitWidth="29.0" layoutX="1261.0" layoutY="15.0" onMouseClicked="#popup" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/setting.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="23.0" layoutY="14.0" text="IT" textFill="#b50b0b">
+                           <font>
+                              <Font name="Bell MT" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="124.0" layoutY="59.0" mnemonicParsing="false" styleClass="button1" text="THI CUỐI KỲ" />
+                        <Button layoutX="54.0" layoutY="59.0" mnemonicParsing="false" styleClass="button2" text="My courses" />
+                        <Button layoutX="12.0" layoutY="59.0" mnemonicParsing="false" styleClass="button1" text="Home" />
+                        <Label layoutX="55.0" layoutY="61.0" text="/">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="124.0" layoutY="62.0" text="/">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="1171.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#changeSceneAddNewQuiz" styleClass="pane1" text="TURN EDITTING ON" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane fx:id="popup" layoutX="996.0" layoutY="29.0" prefHeight="111.0" prefWidth="265.0" visible="false">
+                           <children>
+                              <Label layoutX="11.0" layoutY="5.0" text="Question bank" textFill="#1a81b9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="174.0" layoutY="9.0" onMouseClicked="#changeSceneQuestionbank" text="Questions" textFill="#1a81b9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="174.0" layoutY="33.0" text="Categories" textFill="#1a81b9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="174.0" layoutY="58.0" text="Import" textFill="#1a81b9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="174.0" layoutY="82.0" text="Export" textFill="#1a81b9">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="background" />
+                              <String fx:value="pane2" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

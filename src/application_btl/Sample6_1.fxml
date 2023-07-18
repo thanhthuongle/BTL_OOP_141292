@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller6_1">
+  <content>
+      <AnchorPane prefHeight="690.0" prefWidth="1355.0" styleClass="background">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="1350.0" styleClass="pane1" />
+            <AnchorPane layoutX="10.0" layoutY="50.0" prefHeight="87.0" prefWidth="1330.0" styleClass="pane2">
+               <children>
+                  <Label layoutX="21.0" layoutY="55.0" prefHeight="17.0" prefWidth="45.0" text="Home " textFill="#cd2525" />
+                  <Label layoutX="27.0" layoutY="16.0" text="IT" textFill="#b50b0b">
+                     <font>
+                        <Font name="Bell MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="55.0" text="/ My courses /" textFill="#cd2525" />
+                  <Label fx:id="linkQuiz" layoutX="272.0" layoutY="55.0" prefHeight="17.0" prefWidth="170.0" text="linkQuiz" />
+                  <Label layoutX="133.0" layoutY="55.0" onMouseClicked="#changeSceneToTHICUOIKY" prefHeight="17.0" prefWidth="82.0" text=" THI CUỐI KỲ / " textFill="#cd2525" />
+                  <Label layoutX="215.0" layoutY="55.0" prefHeight="17.0" prefWidth="55.0" text="General /" textFill="#cd2525" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="154.0" prefHeight="530.0" prefWidth="1330.0">
+               <styleClass>
+                  <String fx:value="pane2" />
+                  <String fx:value="background" />
+               </styleClass>
+               <children>
+                  <Label fx:id="titleQuiz" layoutX="27.0" layoutY="21.0" prefHeight="35.0" prefWidth="500.0" text="titleQuiz" textFill="#cd2525">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="1284.0" layoutY="28.0" onMouseClicked="#changeSceneEditingQuiz" prefHeight="25.0" prefWidth="14.0" styleClass="background" />
+                  <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="1262.0" layoutY="23.0" onMouseClicked="#changeSceneEditingQuiz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/setting.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="timeLimit" layoutX="1056.0" layoutY="82.0" text="Time limit" />
+                  <Label layoutX="1023.0" layoutY="116.0" text="Grading method: Last attempt" />
+                  <TableView layoutX="27.0" layoutY="178.0" prefHeight="200.0" prefWidth="1277.0">
+                    <columns>
+                      <TableColumn prefWidth="541.0" text="Attempt" />
+                      <TableColumn prefWidth="735.0" text="State" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="1060.0" layoutY="418.0" mnemonicParsing="false" styleClass="pane1" text="PREVIEW QUIZ NOW" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="27.0" layoutY="143.0" text="Summary of your previous attempts" textFill="#f23333">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+  </content>
+</ScrollPane>

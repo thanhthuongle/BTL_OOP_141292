@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1355.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller6_3">
+   <children>
+      <Label prefHeight="50.0" prefWidth="1355.0" styleClass="background" text="   Add from the question bank at the end" textFill="#cd2525">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="1365.0" layoutY="50.0" opacity="0.32" />
+      <ScrollPane layoutY="50.0" prefHeight="650.0" prefWidth="1365.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="950.0" prefWidth="1355.0" styleClass="background">
+               <children>
+                  <Label layoutX="19.0" layoutY="14.0" text="Select a category: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelcategory" contentDisplay="RIGHT" layoutX="164.0" layoutY="13.0" onMouseClicked="#treeView_popup" prefHeight="29.0" prefWidth="304.0" styleClass="pane2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="433.0" layoutY="15.0" onMouseClicked="#treeView_popup" prefHeight="22.0" prefWidth="32.0" styleClass="background" />
+                  <Label layoutX="19.0" layoutY="75.0" text="Search option:" textFill="DODGERBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="19.0" layoutY="103.0" mnemonicParsing="false" selected="true" text="Also show question from category" />
+                  <CheckBox layoutX="19.0" layoutY="130.0" mnemonicParsing="false" text="Also show old question" />
+                  <TableView fx:id="table" layoutX="20.0" layoutY="170.0" prefHeight="690.0" prefWidth="1310.0">
+                    <columns>
+                      <TableColumn fx:id="checkboxColumn" prefWidth="50.0" sortable="false" />
+                      <TableColumn fx:id="questionColumn" prefWidth="1195.0" sortable="false" text="Question" />
+                        <TableColumn fx:id="imageColumn" prefWidth="50.0" sortable="false" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="19.0" layoutY="890.0" mnemonicParsing="false" onMouseClicked="#changeSceneAddQuestionQuiz" styleClass="pane1" text="ADD SELECTED QUESTION TO QUIZ" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TreeView fx:id="treeView" layoutX="164.0" layoutY="41.0" prefHeight="200.0" prefWidth="360.0" styleClass="pane2" visible="false" />
+                  <CheckBox fx:id="selectAllCheckBox" alignment="CENTER" layoutX="37.0" layoutY="174.0" mnemonicParsing="false" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="1322.0" layoutY="12.0" onMouseClicked="#changeSceneBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close_2976286.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

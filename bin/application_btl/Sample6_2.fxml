@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1355.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller6_2">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="1355.0" styleClass="background">
+         <children>
+            <AnchorPane layoutX="15.0" prefHeight="91.0" prefWidth="1330.0" styleClass="pane2">
+               <children>
+                  <Label layoutX="21.0" layoutY="55.0" prefHeight="17.0" prefWidth="45.0" text="Home " textFill="#cd2525" />
+                  <Label layoutX="27.0" layoutY="16.0" text="IT" textFill="#b50b0b">
+                     <font>
+                        <Font name="Bell MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="55.0" text="/ My courses /" textFill="#cd2525" />
+                  <Label fx:id="linkQuiz" layoutX="272.0" layoutY="55.0" prefHeight="17.0" prefWidth="170.0" text="linkQuiz" textFill="#cd2525" />
+                  <Label layoutX="133.0" layoutY="55.0" onMouseClicked="#changeSceneToTHICUOIKY" prefHeight="17.0" prefWidth="82.0" text=" THI CUỐI KỲ / " textFill="#cd2525" />
+                  <Label layoutX="215.0" layoutY="55.0" prefHeight="17.0" prefWidth="55.0" text="General /" textFill="#cd2525" />
+                  <Label layoutX="442.0" layoutY="55.0" prefHeight="17.0" prefWidth="57.0" text="/ General" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="15.0" layoutY="123.0" prefHeight="700.0" prefWidth="1330.0" styleClass="pane2">
+               <children>
+                  <Label layoutX="29.0" layoutY="19.0" prefHeight="35.0" prefWidth="146.0" text="Editting quiz: " textFill="#cd2525">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="titleQuiz" contentDisplay="RIGHT" layoutX="175.0" layoutY="19.0" prefHeight="35.0" prefWidth="700.0" text="titleQuiz" textFill="#cd2525">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/question.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="label1" contentDisplay="RIGHT" layoutX="29.0" layoutY="67.0" text="Question: 0 | This quiz is open" />
+                  <Label contentDisplay="RIGHT" layoutX="1048.0" layoutY="67.0" text="Maximum grade" />
+                  <TextField layoutX="1143.0" layoutY="63.0" prefHeight="27.0" prefWidth="75.0" styleClass="pane2" text="10.00" />
+                  <Button layoutX="1240.0" layoutY="60.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="52.0" styleClass="pane1" text="SAVE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="label2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1186.0" layoutY="113.0" prefHeight="17.0" prefWidth="108.0" text="Total of mark: 0.00" />
+                  <Button layoutX="29.0" layoutY="106.0" mnemonicParsing="false" styleClass="pane1" text="SELECT MULTIPLEITEMS" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="29.0" layoutY="145.0" prefHeight="430.0" styleClass="background">
+                     <children>
+                        <AnchorPane prefHeight="60.0" prefWidth="1270.0" styleClass="pane3">
+                           <children>
+                              <CheckBox contentDisplay="RIGHT" layoutX="1171.0" layoutY="5.0" mnemonicParsing="false" text="Shuffle">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/question.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </CheckBox>
+                              <ChoiceBox layoutX="1219.0" layoutY="36.0" onMouseClicked="#popup" prefHeight="25.0" prefWidth="11.0" styleClass="pane3" />
+                              <Label layoutX="1203.0" layoutY="37.0" onMouseClicked="#popup" prefHeight="24.0" prefWidth="23.0" text="Add" textFill="DODGERBLUE" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane layoutY="61.0" prefViewportHeight="367.0" prefViewportWidth="1270.0">
+                           <content>
+                              <VBox fx:id="vbox" layoutY="61.0" prefHeight="367.0" prefWidth="1270.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="popup" layoutX="1116.0" layoutY="202.0" prefHeight="92.0" prefWidth="159.0" styleClass="pane3" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="-1.0" prefHeight="30.0" prefWidth="145.0" styleClass="pane3" text="a new question">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add_1632686.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="29.0" onMouseClicked="#changeSceneAddQuestionBank" prefHeight="30.0" prefWidth="145.0" styleClass="pane3" text="from question bank">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add_1632686.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="59.0" prefHeight="30.0" prefWidth="145.0" styleClass="pane3" text="a random question">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add_1632686.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

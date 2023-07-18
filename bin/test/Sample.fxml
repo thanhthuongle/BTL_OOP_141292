@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.Controller">
+   <children>
+      <TableView fx:id="table" layoutX="72.0" layoutY="56.0" prefHeight="300.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="questionColumn" prefWidth="446.0" sortable="false" text="question" />
+          <TableColumn fx:id="actionsColumn" prefWidth="55.0" sortable="false" styleClass="button1" text="actions" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

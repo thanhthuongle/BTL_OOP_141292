@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="435.0" styleClass="pane2" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controllerchoice">
+   <children>
+      <Label layoutX="14.0" layoutY="128.0" text="Choice 1" />
+      <Label layoutX="27.0" layoutY="160.0" prefHeight="17.0" prefWidth="34.0" text="Grade" />
+      <ComboBox fx:id="combobox" layoutX="83.0" layoutY="156.0" prefHeight="27.0" prefWidth="77.0" promptText="None">
+         <styleClass>
+            <String fx:value="background" />
+            <String fx:value="pane2" />
+         </styleClass>
+      </ComboBox>
+      <TextField layoutX="83.0" layoutY="124.0" prefHeight="25.0" prefWidth="290.0" />
+      <Pane layoutX="83.0" layoutY="5.0" prefHeight="120.0" prefWidth="290.0" styleClass="pane2">
+         <children>
+            <ImageView fitHeight="118.0" fitWidth="288.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Button layoutX="279.0" layoutY="155.0" mnemonicParsing="false" text="Choose image">
+         <styleClass>
+            <String fx:value="pane2" />
+            <String fx:value="background" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

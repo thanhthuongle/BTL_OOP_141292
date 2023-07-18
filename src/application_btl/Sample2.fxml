@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fx:id="SP" prefHeight="710.0" prefWidth="1355.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_btl.Controller2">
+   <content>
+      <VBox prefWidth="1355.0" styleClass="background">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="1355.0" styleClass="pane1" VBox.vgrow="NEVER" />
+            <AnchorPane prefHeight="135.0" prefWidth="450.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Pane layoutX="10.0" layoutY="14.0" prefHeight="110.0" prefWidth="1335.0">
+                     <styleClass>
+                        <String fx:value="pane2" />
+                        <String fx:value="background" />
+                     </styleClass>
+                  </Pane>
+                  <Button layoutX="134.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#changeSceneHome" styleClass="button1" text="THI CUỐI KỲ" />
+                  <Button layoutX="64.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#changeSceneHome" styleClass="button2" text="My courses" />
+                  <Button layoutX="22.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#changeSceneHome" styleClass="button1" text="Home" />
+                  <Label layoutX="28.0" layoutY="16.0" onMouseClicked="#changeSceneHome" text="IT" textFill="#b50b0b">
+                     <font>
+                        <Font name="Bell MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="58.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="134.0" layoutY="59.0" text="/">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="403.0" prefWidth="450.0" styleClass="background">
+               <children>
+                  <StackPane layoutX="10.0" layoutY="10.0" prefHeight="504.0" prefWidth="1335.0">
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="pane2" />
+                     </styleClass>
+                     <children>
+                        <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="background" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Question">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="321.0" prefWidth="428.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="15.0" text="Question bank" textFill="#fc1616">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="54.0" text="Select a category: " textFill="#7c7c7c">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="90.0" text="The default category for question shared in context">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="114.0" text="Also show question from subcategories" textFill="#7c7c7c">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <graphic>
+                                                <CheckBox mnemonicParsing="false" selected="true" />
+                                             </graphic>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="141.0" text="Also show old questions" textFill="#7c7c7c">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <graphic>
+                                                <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" />
+                                             </graphic>
+                                          </Label>
+                                          <Button layoutX="16.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#changeSceneCreatQuestion" styleClass="pane1" text="CREAT A NEW QUESTION" textFill="WHITE">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Label fx:id="labelcategory" contentDisplay="RIGHT" layoutX="130.0" layoutY="46.0" onMouseClicked="#treeView_popup" prefHeight="35.0" prefWidth="204.0" text="   Default ">
+                                             <styleClass>
+                                                <String fx:value="pane2" />
+                                                <String fx:value="background" />
+                                             </styleClass>
+                                          </Label>
+                                          <ScrollPane layoutX="15.0" layoutY="200.0" prefHeight="268.0" prefWidth="1290.0" styleClass="background">
+                                             <content>
+                                                <TableView fx:id="table" prefHeight="267.0" prefWidth="1290.0" styleClass="background">
+                                                  <columns>
+                                                    <TableColumn fx:id="questionColumn" prefWidth="1206.0" text="Question" />
+                                                      <TableColumn fx:id="actionsColumn" minWidth="0.0" prefWidth="68.0" styleClass="tablecolumn1" text="Actions" />
+                                                  </columns>
+                                                </TableView>
+                                             </content>
+                                          </ScrollPane>
+                                          <TreeView fx:id="treeView" layoutX="130.0" layoutY="81.0" prefHeight="200.0" prefWidth="350.0" visible="false" />
+                                          <ChoiceBox layoutX="298.0" layoutY="51.0" onMouseClicked="#treeView_popup" prefHeight="25.0" prefWidth="8.0" styleClass="background" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Categories">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="66.0" layoutY="25.0" text="Add category" textFill="#dd2525">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="1150.0" layoutX="138.0" layoutY="376.0" opacity="0.5" startX="-100.0" stroke="#979090" strokeWidth="0.7" />
+                                          <Button layoutX="641.0" layoutY="391.0" mnemonicParsing="false" onAction="#addNewCategory" styleClass="pane3" text="ADD CATEGORY" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Label contentDisplay="RIGHT" layoutX="569.0" layoutY="427.0" text="There are required fields in this form marked">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/icona.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                          <Label layoutX="66.0" layoutY="70.0" text="Parent category" />
+                                          <Label layoutX="66.0" layoutY="107.0" text="Name" />
+                                          <Label layoutX="66.0" layoutY="144.0" text="Category info" />
+                                          <ComboBox fx:id="category" layoutX="663.0" layoutY="75.0" prefHeight="25.0" prefWidth="339.0" promptText="Default" />
+                                          <TextField fx:id="addCategory" layoutX="663.0" layoutY="112.0" prefHeight="25.0" prefWidth="464.0" />
+                                          <TextArea layoutX="663.0" layoutY="147.0" prefHeight="177.0" prefWidth="600.0" wrapText="true" />
+                                          <Label layoutX="66.0" layoutY="340.0" text="ID numbef" />
+                                          <TextField layoutX="663.0" layoutY="336.0" />
+                                          <ImageView fitHeight="14.0" fitWidth="15.0" layoutX="629.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/question.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="14.0" fitWidth="15.0" layoutX="629.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/question.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="14.0" fitWidth="15.0" layoutX="629.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icona.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="viewTooltip" editable="false" layoutX="1064.0" layoutY="33.0" prefHeight="25.0" prefWidth="253.0" visible="false">
+                                             <tooltip>
+                                                <Tooltip fx:id="noticeCategory" autoHide="true" graphicTextGap="1.0" styleClass="tooltip1">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="viewTooltip1" editable="false" layoutX="1074.0" layoutY="43.0" prefHeight="25.0" prefWidth="253.0" visible="false">
+                                             <tooltip>
+                                                <Tooltip fx:id="noticeCategory1" autoHide="true" graphicTextGap="1.0" styleClass="tooltip2">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Import">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="54.0" layoutY="26.0" prefHeight="28.0" prefWidth="249.0" text="Import questions from file" textFill="#d71717">
+                                             <font>
+                                                <Font name="System Bold" size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="54.0" layoutY="80.0" text="File format" textFill="#d71717">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="54.0" layoutY="121.0" text="General" textFill="#d71717">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="54.0" layoutY="174.0" prefHeight="28.0" prefWidth="180.0" text="Import questions from file" textFill="#d71717">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="1130.0" layoutX="144.0" layoutY="111.0" opacity="0.5" startX="-100.0" stroke="#979090" strokeWidth="0.7" />
+                                          <Line endX="1130.0" layoutX="144.0" layoutY="160.0" opacity="0.5" startX="-100.0" stroke="#979090" strokeWidth="0.7" />
+                                          <Label layoutX="616.0" layoutY="80.0" text="Aiken format">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="616.0" layoutY="202.0" mnemonicParsing="false" onAction="#ChooseFile" prefHeight="31.0" prefWidth="150.0" styleClass="pane1" text="CHOOSE A FILE" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="779.0" layoutY="207.0" text="Maximum size for new files: 100MB">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <AnchorPane layoutX="616.0" layoutY="237.0" prefHeight="155.0" prefWidth="445.0" styleClass="pane2">
+                                             <children>
+                                                <AnchorPane fx:id="importFile" layoutX="5.0" layoutY="5.0" prefHeight="145.0" prefWidth="435.0" styleClass="pane4">
+                                                   <children>
+                                                      <Label layoutX="65.0" layoutY="110.0" text="You can drag and drop files here to add them.">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="184.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../images/10570943.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button layoutX="620.0" layoutY="409.0" mnemonicParsing="false" onAction="#importFile" styleClass="pane3" text="IMPORT" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <Label contentDisplay="RIGHT" layoutX="511.0" layoutY="443.0" text="There are required fields in this form marked">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/icona.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="54.0" layoutY="220.0" text="Import:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="namefile" layoutX="110.0" layoutY="219.0" prefHeight="19.0" prefWidth="300.0" styleClass="pane2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="viewTooltip1" layoutX="1057.0" layoutY="184.0" prefHeight="25.0" prefWidth="250.0" visible="false">
+                                             <tooltip>
+                                                <Tooltip fx:id="noticeImportFile" styleClass="tooltip1">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField layoutX="1067.0" layoutY="194.0" prefHeight="25.0" prefWidth="250.0" visible="false">
+                                             <tooltip>
+                                                <Tooltip fx:id="noticeImportFile1" styleClass="tooltip2">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Export">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

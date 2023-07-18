@@ -1,0 +1,27 @@
+.pane1{
+	-fx-background-color: rgba(24,116,205,1);
+}
+
+.pane2{
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-color: #BEBEBE;
+}
+
+.menubutton1{
+	-fx-background-color: rgba(24,116,205,1);
+}
+
+.button1{
+	-fx-background-color: white;
+	-fx-text-fill: #cd2525;
+}
+
+.button2{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.background{
+	-fx-background-color: white;
+}

@@ -1,0 +1,57 @@
+.background{
+	-fx-background-color: white;
+}
+
+.pane1{
+	-fx-background-color: #1E90FF;
+}
+
+.pane2{
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-color: #BEBEBE;
+}
+
+.pane3{
+	-fx-background-color: #D2122E;
+}
+
+.pane4{
+	-fx-background-color: white;
+	-fx-border-style: dashed;
+	-fx-border-color: #BEBEBE;
+}
+
+.button1{
+	-fx-background-color: white;
+	-fx-text-fill: #cd2525;
+}
+
+.button2{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.checkbox:selected {
+    -fx-background-color: #0000FF; /* Màu nền khi đã chọn */
+    -fx-border-color: #008000;  /*Màu viền khi đã chọn */
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #f2f2f2;
+}
+
+.tablecolumn1{
+	-fx-alignment: center; /* Căn giữa ngang */
+	-fx-text-fill: blue;
+}
+
+.tooltip1{
+    -fx-background-color: #00FF7F;
+    -fx-text-fill: white;
+}
+
+.tooltip2{
+    -fx-background-color: #FF0000;
+    -fx-text-fill: white;
+}
